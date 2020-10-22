@@ -7,9 +7,9 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException {
 
 		Fregadero fregadero = new Fregadero();
-		Thread fregadorThread = new Thread(new Fregador(fregadero), "Amigo 1");
-		Thread secadorThread = new Thread(new Secador(fregadero), "Amigo 2");
-		Thread organizadorThread = new Thread(new Organizador(fregadero), "Amigo 3");
+		Thread fregadorThread = new Thread(new Fregador(fregadero), "Aaron");
+		Thread secadorThread = new Thread(new Secador(fregadero), "Antonio");
+		Thread organizadorThread = new Thread(new Organizador(fregadero), "Ezequiel");
 		
 		fregadorThread.start();
 		secadorThread.start();
