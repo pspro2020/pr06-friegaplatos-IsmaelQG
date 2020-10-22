@@ -2,9 +2,9 @@ package code;
 
 public class Secador implements Runnable{
 
-private final Amigos fregadero;
+private final Fregadero fregadero;
 	
-	public Secador(Amigos fregadero) {
+	public Secador(Fregadero fregadero) {
 		this.fregadero = fregadero;
 	}
 	

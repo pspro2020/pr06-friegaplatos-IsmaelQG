@@ -5,10 +5,10 @@ import java.util.concurrent.TimeUnit;
 
 public class Fregador implements Runnable{
 	
-	private final Amigos fregadero;
+	private final Fregadero fregadero;
 	private int nPlato = 0;
 	
-	public Fregador(Amigos fregadero) {
+	public Fregador(Fregadero fregadero) {
 		this.fregadero = fregadero;
 	}
 

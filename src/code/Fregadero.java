@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
-public class Amigos {
+public class Fregadero {
 	
 	ArrayList<Plato> platosLimpios = new ArrayList<>();
 	ArrayList<Plato> platosSecos = new ArrayList<>();

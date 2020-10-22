@@ -6,10 +6,10 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		Amigos amigos = new Amigos();
-		Thread fregadorThread = new Thread(new Fregador(amigos), "Amigo 1");
-		Thread secadorThread = new Thread(new Secador(amigos), "Amigo 2");
-		Thread organizadorThread = new Thread(new Organizador(amigos), "Amigo 3");
+		Fregadero fregadero = new Fregadero();
+		Thread fregadorThread = new Thread(new Fregador(fregadero), "Amigo 1");
+		Thread secadorThread = new Thread(new Secador(fregadero), "Amigo 2");
+		Thread organizadorThread = new Thread(new Organizador(fregadero), "Amigo 3");
 		
 		fregadorThread.start();
 		secadorThread.start();
@@ -21,11 +21,15 @@ public class Main {
 		secadorThread.interrupt();
 		organizadorThread.interrupt();
 		
+		System.out.printf("\n%s: Estoy molío\n", fregadorThread.getName());
+		System.out.printf("%s: Mucho plato\n", secadorThread.getName());
+		System.out.printf("%s: Donde está el cumpleañero?\n\n", organizadorThread.getName());
+		
 		fregadorThread.join();
 		secadorThread.join();
 		organizadorThread.join();
 		
-		System.out.println("Feliz cumpleaños");
+		System.out.println("Feliz cumpleaños!!!!!!");
 	}
 
 }
